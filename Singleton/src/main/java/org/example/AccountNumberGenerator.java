@@ -17,17 +17,17 @@ public class AccountNumberGenerator
     private static AccountNumberGenerator accountNumberGeneratorInstance;
     private int accountNo = 0;
 
-    /*
-     * Private constructor so that multiple instances of the class cannot be
-     * instantiated outside the class.
-     */
+   /*
+    * Private constructor so that multiple instances of the class cannot be
+    * instantiated outside the class.
+    */
     private AccountNumberGenerator() {}
 
-    /*
-     * Returns an instance of this class. Provides Lazy-loading so that an instance
-     * is only instantiated if there isn't already an existing instance. If there is already
-     * an existing instance, then that instance is returned.
-     */
+   /*
+    * Returns an instance of this class. Provides Lazy-loading so that an instance
+    * is only instantiated if there isn't already an existing instance. If there is already
+    * an existing instance, then that instance is returned.
+    */
     public static AccountNumberGenerator getInstance()
     {
         if (accountNumberGeneratorInstance == null)
@@ -37,9 +37,9 @@ public class AccountNumberGenerator
         return accountNumberGeneratorInstance;
     }
 
-    /*
-     * This method increments the accountNo variable by one on each call.
-     * It is marked as 'synchronized' so that only one thread at a time can execute this method.
-     */
+   /*
+    * This method increments the accountNo variable by one on each call.
+    * It is marked as 'synchronized' so that only one thread at a time can execute this method.
+    */
     public synchronized int getNextNumber() { return accountNo++; }
 }
