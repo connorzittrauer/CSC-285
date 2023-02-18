@@ -1,11 +1,12 @@
 /*  Name: Connor Zittrauer
  *  Course: CSC 285
- *  Project: ProjectName
- *  File Name: FileName.java
+ *  Project: Strategy Pattern
+ *  File Name: CSV.java
  */
 
-/* Class Description */
-
+/* This a behavioral class that implements the IWriteable interface. It provides
+ * a concrete implementation of the writeToFile() method for writing to a CSV file.
+ */
 package org.example.Formats;
 
 import org.example.IWriteable;

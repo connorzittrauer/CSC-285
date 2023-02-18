@@ -1,10 +1,10 @@
 /*  Name: Connor Zittrauer
  *  Course: CSC 285
- *  Project: ProjectName
- *  File Name: FileName.java
+ *  Project: Strategy Pattern
+ *  File Name: CarrierBigBobs.java
  */
 
-/* Class Description */
+/* Provides a concrete implementation of the Shipment class */
 
 package org.example.Carriers;
 import org.example.Formats.CSV;

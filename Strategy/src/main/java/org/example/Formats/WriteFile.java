@@ -1,10 +1,12 @@
 /*  Name: Connor Zittrauer
  *  Course: CSC 285
- *  Project: ProjectName
- *  File Name: FileName.java
+ *  Project: Strategy Pattern
+ *  File Name: WriteFile.java
  */
 
-/* Class Description */
+/* This a behavioral class that implements the IWriteable interface. It provides
+ * a concrete implementation of the writeToFile() method for writing to a generic file.
+ */
 
 package org.example.Formats;
 

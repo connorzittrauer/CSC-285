@@ -1,10 +1,12 @@
 /*  Name: Connor Zittrauer
  *  Course: CSC 285
  *  Project: Strategy Pattern
- *  File Name: FileName.java
+ *  File Name: IWriteable.java
  */
 
-/* Interface Description */
+/* Interface used to provide a generic writeToFile() for extensibility.
+ * Multiple classes extend this interface.
+ */
 
 package org.example;
 

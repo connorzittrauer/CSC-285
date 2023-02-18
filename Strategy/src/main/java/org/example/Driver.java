@@ -1,10 +1,10 @@
 /*  Name: Connor Zittrauer
  *  Course: CSC 285
- *  Project: ProjectName
- *  File Name: FileName.java
+ *  Project: Strategy Pattern
+ *  File Name: Driver.java
  */
 
-/* Class Description */
+/* Driver class for demonstrating carrier file writes. */
 
 package org.example;
 
@@ -29,10 +29,16 @@ public class Driver
         DHL.writeToFile();
         bobs.writeToFile();
 
+        System.out.println("\nChanging FedEx write to CSV");
         // Modifies behavior of FedEX strategy
         CSV csv = new CSV("FedEX");
         fedEX.setWriteable(csv);
         fedEX.writeToFile();
 
+        System.out.println("\nChanging FedEx write back to generic file");
+        // Changes FedEx again behavior back to generic
+        WriteFile wf = new WriteFile("FedEX");
+        fedEX.setWriteable(wf);
+        fedEX.writeToFile();
     }
 }
