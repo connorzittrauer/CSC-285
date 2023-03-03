@@ -1,24 +1,27 @@
+/*  Name: Connor Zittrauer
+ *  Course: CSC 285
+ *  Project: Composite
+ *  File Name: Course.java
+ */
+
+/*  This class provides an implementation for a course.
+ *  Its use is as the 'component' of the design pattern.
+ */
 
 import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
  * @author lruesch
  */
-public class Course {
+public class Course
+{
     private String department;
     private String number;
     private String title;
     private String description;
     private ArrayList<Course> courses = new ArrayList<>();
-    
-    
+
+
     public Course(String department, String number, String title, String description)
     {
         this.department = department;
@@ -26,27 +29,33 @@ public class Course {
         this.title = title;
         this.description = description;
     }
-    
+
     public String toString()
     {
         return department + number + ": " + title;
     }
 
-    public void addPrerequisite(Course course) {
+    public void addPrerequisite(Course course)
+    {
         courses.add(course);
     }
 
-    public String getPrerequisites() {
-        String baseCourse = this.toString() + "\n";
+    /* This method adds the base course to the StringBuilder string,
+     * iterates through the course ArrayList and recursively finds any
+     * sub-courses of those courses within in the foreach loop.
+     *
+     * The base case is when the courses ArrayList is empty.
+     */
+    public String getPrerequisites()
+    {
+        String baseCourse = this + "\n";
         StringBuilder sb = new StringBuilder();
         sb.append(baseCourse);
 
-        for (Course course: courses)
+        for (Course course : courses)
         {
-            sb.append(course.getPrerequisites()).append("\n");
+            sb.append(course.getPrerequisites());
         }
-
         return sb.toString();
-
     }
 }
